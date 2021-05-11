@@ -9,7 +9,7 @@
 
 namespace App\Controller;
 
-use Symfony\Component\HttpClient\HttpClient;
+//use Symfony\Component\HttpClient\HttpClient;
 
 class HomeController extends AbstractController
 {
@@ -23,7 +23,7 @@ class HomeController extends AbstractController
      */
     public function index()
     {
-        $client = HttpClient::create();
+        /*        $client = HttpClient::create();
         $response = $client->request('GET', 'http://www.themealdb.com/api/json/v1/1/random.php');
 
         $statusCode = $response->getStatusCode(); // get Response status code 200
@@ -33,7 +33,7 @@ class HomeController extends AbstractController
             // convert the response (here in JSON) to an PHP array
         }
         var_dump($tests);
-
-                return $this->twig->render('Home/index.html.twig',['tests' => $tests]);
-            }
+*/
+        return $this->twig->render('Home/index.html.twig');
     }
+}
