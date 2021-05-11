@@ -11,7 +11,7 @@ namespace App\Controller;
 
 use Symfony\Component\HttpClient\HttpClient;
 
-class HomeController extends AbstractController
+class RecipesController extends AbstractController
 {
     /**
      * Display home page
@@ -21,38 +21,28 @@ class HomeController extends AbstractController
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
      */
-    public function index(): string
-    {
-        /*        $client = HttpClient::create();
-        $response = $client->request('GET', 'http://www.themealdb.com/api/json/v1/1/random.php');
-
-        $statusCode = $response->getStatusCode(); // get Response status code 200
-
-        if ($statusCode === 200) {
-            $tests = $response->toArray();
-            // convert the response (here in JSON) to an PHP array
-        }
-        var_dump($tests);d
-*/
-        return $this->twig->render('Home/index.html.twig');
-    }
-    public function recipe(): string
+    public function index()
     {
         $client = HttpClient::create();
         $responseMonday = $client->request('GET', 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52771');
         $responseTuesday = $client->request('GET', 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52770');
         $responseWednesday = $client->request('GET', 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52777');
+        $responseThu = $client->request('GET', 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772');
+        $responseFri = $client->request('GET', 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772');
+
         $statusCode = $responseMonday->getStatusCode();
         if ($statusCode === 200) {
             $monday = $responseMonday->toArray();
             $tuesday = $responseTuesday->toArray();
             $wednesday = $responseWednesday->toArray();
+            $thu = $responseThu->toArray();
+            $fri = $responseFri->toArray();
+
             return $this->twig->render('Home/recipes.html.twig', [
                 'monday' => $monday, ['monday'],
                 'tuesday' => $tuesday, ['tuesday'],
-                'wednesday' => $wednesday, ['wednesday'],
-            ]);
+                'wednesday' => $wednesday, ['wednesday'],'thu' => $thu, ['thu'],'fri' => $fri, ['fri'],]);
         }
-        return $this->twig->render('Home/index.html.twig');
+        return $this->twig->render('Home/recipes.html.twig');
     }
 }
