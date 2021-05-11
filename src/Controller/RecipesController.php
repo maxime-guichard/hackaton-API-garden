@@ -41,10 +41,8 @@ class RecipesController extends AbstractController
             return $this->twig->render('Home/recipes.html.twig', [
                 'monday' => $monday, ['monday'],
                 'tuesday' => $tuesday, ['tuesday'],
-                'wednesday' => $wednesday, ['wednesday'],
-                'thu' => $thu, ['thu'],
-                'fri' => $fri, ['fri'],
-            ]);
+                'wednesday' => $wednesday, ['wednesday'],'thu' => $thu, ['thu'],'fri' => $fri, ['fri'],]);
         }
+        return $this->twig->render('Home/recipes.html.twig');
     }
 }
