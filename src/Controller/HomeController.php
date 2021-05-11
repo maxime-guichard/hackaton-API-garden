@@ -9,7 +9,7 @@
 
 namespace App\Controller;
 
-//use Symfony\Component\HttpClient\HttpClient;
+use Symfony\Component\HttpClient\HttpClient;
 
 class HomeController extends AbstractController
 {
@@ -35,5 +35,23 @@ class HomeController extends AbstractController
         var_dump($tests);
 */
         return $this->twig->render('Home/index.html.twig');
+    }
+    public function recipe()
+    {
+        $client = HttpClient::create();
+        $responseMonday = $client->request('GET', 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52771');
+        $responseTuesday = $client->request('GET', 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52770');
+        $responseWednesday = $client->request('GET', 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52777');
+        $statusCode = $responseMonday->getStatusCode();
+        if ($statusCode === 200) {
+            $monday = $responseMonday->toArray();
+            $tuesday = $responseTuesday->toArray();
+            $wednesday = $responseWednesday->toArray();
+            return $this->twig->render('Home/recipes.html.twig', [
+                'monday' => $monday, ['monday'],
+                'tuesday' => $tuesday, ['tuesday'],
+                'wednesday' => $wednesday, ['wednesday'],
+            ]);
+        }
     }
 }
