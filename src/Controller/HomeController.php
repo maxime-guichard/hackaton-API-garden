@@ -32,7 +32,7 @@ class HomeController extends AbstractController
             $tests = $response->toArray();
             // convert the response (here in JSON) to an PHP array
         }
-        var_dump($tests);
+        var_dump($tests);d
 */
         return $this->twig->render('Home/index.html.twig');
     }
