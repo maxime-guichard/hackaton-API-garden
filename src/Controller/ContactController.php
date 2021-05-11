@@ -15,7 +15,7 @@ class ContactController extends AbstractController
 
     //    private array $errors = [];
     private const MAX_LENGTH_NAME = 100;
-    public const TITLES = ['M' => 'Monsieur', 'Mme' => 'Madame', 'Melle' => 'Mademoiselle'];
+    public const TITLES = ['M' => 'Martien', 'T' => 'Terrien', 'J' => 'Jedi'];
 
     public function index(): string
     {
