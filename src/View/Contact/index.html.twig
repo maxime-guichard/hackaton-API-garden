@@ -18,12 +18,11 @@
 		<h1 class="h1 text-center pt-3 my-5">Contactez-nous</h1>
 
 		{% include "Contact/_form.html.twig" %}
-	
+
 		<h2 class="my-5 text-center h1">Où nous trouver ?</h2>
 
-		<div class="d-flex flex-column justify-content-center align-items-center">
-			<iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-19.291992187500004%2C1.7575368113083254%2C35.55175781250001%2C38.95940879245423&amp;layer=mapnik&amp;marker=47.83226394492732%2C1.9685161113739014" style="border: 1px solid black"></iframe><br/><small>
-						</small>
+		<div class="map d-flex justify-content-center align-items-center p-0">
+			<img class="marker" src="/assets/images/marker.jpg" alt="marker">
 		</div>
 	</main>
 {% endblock %}
