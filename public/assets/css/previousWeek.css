@@ -1,7 +1,15 @@
 .previousWeek .card{
-    margin-left: 10px;
-    margin-right: 10px;
-    max-width: 100px;
-    min-width: 100px;
-   
+    
+  max-height: 220px;
+}  
+.previousWeek .card-title{
+    color: white;
+}
+.previousWeek li{
+    color: white;
+    list-style: none;
+    text-align: center;
+}
+.previousWeek .card-header,h5{
+    text-align: center;
 }
