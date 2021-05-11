@@ -29,3 +29,7 @@
     transform: translate(-50%, -50%);
     color: var(--white-color);
 }
+
+.card {
+     background-color: var(--secondary-color) !important;
+}
