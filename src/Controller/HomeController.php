@@ -23,36 +23,6 @@ class HomeController extends AbstractController
      */
     public function index(): string
     {
-        /*        $client = HttpClient::create();
-        $response = $client->request('GET', 'http://www.themealdb.com/api/json/v1/1/random.php');
-
-        $statusCode = $response->getStatusCode(); // get Response status code 200
-
-        if ($statusCode === 200) {
-            $tests = $response->toArray();
-            // convert the response (here in JSON) to an PHP array
-        }
-        var_dump($tests);d
-*/
-        return $this->twig->render('Home/index.html.twig');
-    }
-    public function recipe(): string
-    {
-        $client = HttpClient::create();
-        $responseMonday = $client->request('GET', 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52771');
-        $responseTuesday = $client->request('GET', 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52770');
-        $responseWednesday = $client->request('GET', 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52777');
-        $statusCode = $responseMonday->getStatusCode();
-        if ($statusCode === 200) {
-            $monday = $responseMonday->toArray();
-            $tuesday = $responseTuesday->toArray();
-            $wednesday = $responseWednesday->toArray();
-            return $this->twig->render('Home/recipes.html.twig', [
-                'monday' => $monday, ['monday'],
-                'tuesday' => $tuesday, ['tuesday'],
-                'wednesday' => $wednesday, ['wednesday'],
-            ]);
-        }
         return $this->twig->render('Home/index.html.twig');
     }
 }
