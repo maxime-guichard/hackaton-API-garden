@@ -3,3 +3,7 @@
 .bg-success {
     background-color: var(--secondary-color) !important;
 }
+
+.card {
+    height: 600px;
+}
