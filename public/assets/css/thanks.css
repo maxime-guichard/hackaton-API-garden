@@ -1,0 +1,9 @@
+@import 'admin.css';
+
+footer {
+    display: none;
+}
+
+.text-blue {
+    color: var(--primary-color);
+}
