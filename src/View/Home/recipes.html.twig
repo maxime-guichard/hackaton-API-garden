@@ -1,58 +1,74 @@
 {% extends 'layout.html.twig' %}
 
+
+{% block stylesheet %}
+	<link rel="stylesheet" href="/assets/css/recipes.css">
+{% endblock %} 
+
+
 {% block content %}
   <br><br><br>
 
 <div class="container">
 <div class="row row-cols-1 row-cols-md-2 g-4">
-  <div class="col">
+  <div class="col" >
     <div class="card text-white bg-success mb-3">
-	 <div class="card-header fw-bold">Monday</div>
-      <img src="{{ monday.meals.0.strMealThumb }}" width="100px" class="card-img-thumb" alt="...">
+	 <div class="card-header fw-bold  d-flex justify-content-center">Monday</div>
+		<div class="d-flex justify-content-center p-3">
+			<img src="{{ monday.meals.0.strMealThumb }}" width="100px" class="card-img-thumb" alt="...">
+		</div>
       <div class="card-body">
-        <h5 class="card-title">{{ monday.meals.0.strMeal }}</h5>
-        <p class="card-text">{{  monday.meals.0.strInstructions }}</p>
+        <h5 class="card-title fw-bold">{{ "Martian " ~ monday.meals.0.strMeal }}</h5>
+        <p class="card-text">{{ monday.meals.0.strInstructions }}</p>
       </div>
     </div>
   </div>
   <div class="col">
     <div class="card text-white bg-success mb-3">
-	 <div class="card-header fw-bold">Tuesday</div>
+	 <div class="card-header fw-bold  d-flex justify-content-center d-flex justify-content-center">Tuesday</div>
+	 <div class="d-flex justify-content-center p-3">
       <img src="{{ tuesday.meals.0.strMealThumb }}" width="100px" class="card-img-thumb" alt="...">
+	  </div>
       <div class="card-body">
-        <h5 class="card-title">{{ tuesday.meals.0.strMeal }}</h5>
+        <h5 class="card-title fw-bold">{{ "Spaceship "  ~ tuesday.meals.0.strMeal }}</h5>
         <p class="card-text">{{ tuesday.meals.0.strInstructions }}</p>
       </div>
     </div>
   </div>
   <div class="col">
     <div class="card text-white bg-success mb-3">
-	 <div class="card-header fw-bold">Wednesday</div>
+	 <div class="card-header fw-bold  d-flex justify-content-center">Wednesday</div>
+	 <div class="d-flex justify-content-center p-3">
       <img src="{{ wednesday.meals.0.strMealThumb }}" width="100px" class="card-img-thumb" alt="...">
+	  </div>
       <div class="card-body">
-        <h5 class="card-title">{{ wednesday.meals.0.strMeal }}</h5>
+        <h5 class="card-title  fw-bold">{{ "Robot-made " ~  wednesday.meals.0.strMeal }}</h5>
         <p class="card-text">{{ wednesday.meals.0.strInstructions }}</p>
       </div>
     </div>
   </div>
   <div class="col">
     <div class="card text-white bg-success mb-3">
-	 <div class="card-header fw-bold">Thursday</div>
+	 <div class="card-header fw-bold  d-flex justify-content-center">Thursday</div>
+	 <div class="d-flex justify-content-center p-3">
       <img src="{{ thu.meals.0.strMealThumb }}"  width="100px" class="card-img-thumb" alt="...">
+	  </div>
       <div class="card-body">
-        <h5 class="card-title">{{ thu.meals.0.strMeal }}</h5>
-        <p class="card-text">{{ thu.meals.0.strInstructions }}</p>
+        <h5 class="card-title  fw-bold">{{ thu.meals.0.strMeal ~ " From Jupiter"}}</h5>
+        <p class="card-text">{{ tuesday.meals.0.strInstructions  }}</p>
       </div>
     </div>
   </div>
 
    <div class="col">
     <div class="card text-white bg-success mb-3">
-	 <div class="card-header fw-bold">Friday</div>
+	 <div class="card-header fw-bold  d-flex justify-content-center">Friday</div>
+	 <div class="d-flex justify-content-center p-3">
       <img src="{{ fri.meals.0.strMealThumb }}"  width="100px" class="card-img-thumb" alt="...">
+	  </div>
       <div class="card-body">
-        <h5 class="card-title">{{ fri.meals.0.strMeal }}</h5>
-        <p class="card-text">{{ fri.meals.0.strInstructions }}</p>
+        <h5 class="card-title  fw-bold">{{  "Shuttle-X " ~ fri.meals.0.strMeal }}</h5>
+        <p class="card-text">{{ tuesday.meals.0.strInstructions }}</p>
       </div>
     </div>
   </div>
@@ -60,10 +76,12 @@
 
    <div class="col">
     <div class="card text-white bg-success mb-3">
-	 <div class="card-header fw-bold">Saturday</div>
+	 <div class="card-header fw-bold  d-flex justify-content-center">Saturday</div>
+	 <div class="d-flex justify-content-center p-3">
       <img src="{{ wednesday.meals.0.strMealThumb }}"  width="100px" class="card-img-thumb" alt="...">
+	  </div>
       <div class="card-body">
-        <h5 class="card-title">{{ wednesday.meals.0.strMeal }}</h5>
+        <h5 class="card-title  fw-bold">{{ wednesday.meals.0.strMeal ~ " From Mars" }}</h5>
         <p class="card-text">{{ wednesday.meals.0.strInstructions }}</p>
       </div>
     </div>
