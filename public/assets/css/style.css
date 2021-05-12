@@ -78,3 +78,26 @@ body {
 .card {
   opacity: 0.8;
 }
+.btn-warning{
+    
+  background-image :url("/assets/images/footermars.png");
+  background-position-x: -150px;
+  background-position-y: -150px;
+  color: white;
+  font-weight: bolder;
+}
+.lastInfos .card-text{
+  color: black;
+
+}
+.lastInfos .card-title{
+  color: white;
+}
+.lastInfos .card-header{
+  color: black;
+
+}
+.lastInfos .text-center{
+  color: white;
+
+}
