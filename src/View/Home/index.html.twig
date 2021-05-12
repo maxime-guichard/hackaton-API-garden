@@ -41,7 +41,7 @@
 							<div class="card-body">
 								<h5 class="card-title fw-bold">
 									<i class="bi bi-egg-fried"></i>
-									{{ "Robot-made " ~  wednesday.meals.0.strMeal }}</h5>
+									{{ "Robot-made " ~  wednesday.meals.0.strMeal |replace({'Christmas': 'Mercury'})}}</h5>
 								<p class="card-text">{{ wednesday.meals.0.strInstructions }}</p>
 							</div>
 						</div>
