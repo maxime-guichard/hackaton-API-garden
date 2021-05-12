@@ -5,5 +5,9 @@ footer {
 }
 
 .text-blue {
+    color: var(--light-color);
+}
+
+.thanks-message {
     color: var(--primary-color);
 }
