@@ -61,11 +61,20 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position-x: 300px;
-  background-position-y: 50px;
+  background-position-y: 350px;
 }
 .marslogo{
   background-image :url("https://cdn.imgbin.com/10/7/15/imgbin-exoplanet-bonbon-chocolate-mars-planet-6a7qxgzqYRNDNK64NTLG78A7W.jpg");
   background-repeat: no-repeat;
+}
+
+.marsheader{
+  background-image :url("/assets/images/headermars.png");
+  background-repeat: no-repeat;
+  background-position-y: 300px;
+  background-size: 100% 27vh;
+  object-fit: contain;
+  border-bottom: 1px solid white;
 }
 
 .marsfooter{
