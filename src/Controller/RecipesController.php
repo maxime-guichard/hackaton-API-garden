@@ -26,7 +26,7 @@ class RecipesController extends AbstractController
         $client = HttpClient::create();
         $responseMonday = $client->request('GET', 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52771');
         $responseTuesday = $client->request('GET', 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52770');
-        $responseWednesday = $client->request('GET', 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52777');
+        $responseWednesday = $client->request('GET', 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52788');
         $responseThu = $client->request('GET', 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52773');
         $responseFri = $client->request('GET', 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772');
         $responseSat = $client->request('GET', 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52774');
