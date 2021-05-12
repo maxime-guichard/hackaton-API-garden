@@ -1,7 +1,8 @@
 <div class="container">
+<h1 class="text-center">Previous Week</h1>
 	<div class="row p-5">
 		<div class="col-xl-4 col-lg-6 col-sm-12">
-			<div class="card text-white bg-success mb-3">
+			<div class="gradient shadow card text-white bg-success mb-3">
 				<div class="card-header">Monday</div>
 				<div class="card-body">
 					<h5 class="card-title">{{ monday.meals.0.strMeal|replace({'Irish': 'Moon'}) }}</h5>
@@ -17,7 +18,7 @@
 			</div>
 		</div>
 		<div class="col-xl-4 col-lg-6 col-sm-12">
-			<div class="card text-white bg-success mb-3">
+			<div class="gradient shadow card text-white bg-success mb-3">
 				<div class="card-header">Tuesday</div>
 				<div class="card-body">
 					<h5 class="card-title">{{ tuesday.meals.0.strMeal|replace({'sweet': 'mars'}) }}</h5>
@@ -33,7 +34,7 @@
 			</div>
 		</div>
 		<div class="col-xl-4 col-lg-6 col-sm-12">
-			<div class="card text-white bg-success mb-3">
+			<div class="gradient shadow card text-white bg-success mb-3">
 				<div class="card-header">Wednesday</div>
 				<div class="card-body">
 					<h5 class="card-title">{{ wednesday.meals.0.strMeal|replace({'Christmas': 'Mercury'})}}</h5>
@@ -50,7 +51,7 @@
 			</div>
 		</div>
 		<div class="col-xl-4 col-lg-6 col-sm-12">
-			<div class="card text-white bg-success mb-3">
+			<div class="gradient shadow card text-white bg-success mb-3">
 				<div class="card-header">Thursday</div>
 				<div class="card-body">
 					<h5 class="card-title">{{ thursday.meals.0.strMeal|replace({'with': '& mutate'})|replace({'Potato': 'Jupiter'}) }} </h5>
@@ -67,7 +68,7 @@
 			</div>
 		</div>
 		<div class="col-xl-4 col-lg-6 col-sm-12">
-			<div class="card text-white bg-success mb-3">
+			<div class="gradient shadow card text-white bg-success mb-3">
 				<div class="card-header">Friday</div>
 				<div class="card-body">
 					<h5 class="card-title">{{ friday.meals.0.strMeal|replace({'Chili': 'venus &'})|replace({'with': ''}) }}</h5>
@@ -84,7 +85,7 @@
 			</div>
 		</div>
 		<div class="col-xl-4 col-lg-6 col-sm-12">
-			<div class="card text-white bg-success mb-3">
+			<div class="gradient shadow card text-white bg-success mb-3">
 				<div class="card-header">Saturday</div>
 				<div class="card-body">
 					<h5 class="card-title">Saturn {{ saturday.meals.0.strMeal }}</h5>
@@ -95,23 +96,6 @@
 					<p class="card-text">{{ saturday.meals.0.strIngredient4}}</p>
                     <div class="text-center">
                        <a href="https://www.themealdb.com/meal/52785"target="_blank" class="btn btn-primary">Original recipe</a>
-                    </div>
-
-				</div>
-			</div>
-		</div>
-		<div class="col-xl-4 col-lg-6 col-sm-12">
-			<div class="card text-white bg-success mb-3">
-				<div class="card-header">Sunday</div>
-				<div class="card-body">
-					<h5 class="card-title">Sun {{ sunday.meals.0.strMeal }}</h5>
-
-					<p class="card-text">{{ sunday.meals.0.strIngredient1}}</p>
-					<p class="card-text">{{ sunday.meals.0.strIngredient2}}</p>
-					<p class="card-text">{{ sunday.meals.0.strIngredient3}}</p>
-					<p class="card-text">{{ sunday.meals.0.strIngredient4}}</p>
-                    <div class="text-center">
-                       <a href="https://www.themealdb.com/meal/52786"target="_blank" class="btn btn-primary">Original recipe</a>
                     </div>
 
 				</div>

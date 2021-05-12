@@ -30,7 +30,7 @@ class HomeController extends AbstractController
         $thursday = [];
         $friday = [];
         $saturday = [];
-        $sunday = [];
+
         $client = HttpClient::create();
         $responseMonday = $client->request('GET', 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52781');
         $responseTuesday = $client->request('GET', 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52782');
@@ -38,7 +38,7 @@ class HomeController extends AbstractController
         $responseThursday = $client->request('GET', 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52780');
         $responseFriday = $client->request('GET', 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52784');
         $responseSaturday = $client->request('GET', 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52785');
-        $responseSunday = $client->request('GET', 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52786');
+
         $statusCode = $responseMonday->getStatusCode();
 
         if ($statusCode === 200) {
@@ -48,7 +48,6 @@ class HomeController extends AbstractController
             $thursday = $responseThursday->toArray();
             $friday = $responseFriday->toArray();
             $saturday = $responseSaturday->toArray();
-            $sunday = $responseSunday->toArray();
         }
 
         return $this->twig->render('Home/index.html.twig', [
@@ -57,8 +56,7 @@ class HomeController extends AbstractController
             'wednesday' => $wednesday, ['wednesday'],
             'thursday' => $thursday, ['thursday'],
             'friday' => $friday, ['friday'],
-            'saturday' => $saturday, ['saturday'],
-            'sunday' => $sunday, ['sunday']
+            'saturday' => $saturday, ['saturday']
         ]);
     }
 }
