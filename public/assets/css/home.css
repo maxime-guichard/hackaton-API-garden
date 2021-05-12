@@ -35,5 +35,10 @@
 }
 
 .marsheader{
-    display: none;
+    background-image :url("/assets/images/headermars.png");
+    background-repeat: no-repeat;
+    background-position-y: 300px;
+    background-size: 100% 27vh;
+    object-fit: contain;
+    border-bottom: 1px solid white;
 }
