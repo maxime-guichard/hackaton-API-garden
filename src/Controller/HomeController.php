@@ -21,8 +21,8 @@ class HomeController extends AbstractController
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
      */
-    
-  public function index(): string
+
+    public function index(): string
     {
         $monday = [];
         $tuesday = [];
@@ -60,8 +60,5 @@ class HomeController extends AbstractController
             'saturday' => $saturday, ['saturday'],
             'sunday' => $sunday, ['sunday']
         ]);
-
-        return $this->twig->render('Home/index.html.twig');
-
     }
 }
