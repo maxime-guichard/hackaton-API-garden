@@ -4,3 +4,6 @@
     background-color: var(--secondary-color) !important;
 }
 
+.card {
+    height:500px;
+}

@@ -60,8 +60,8 @@ body {
   background-image :url("/assets/images/mars.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position-x: 250px;
-  background-position-y: 300px;
+  background-position-x: 300px;
+  background-position-y: 50px;
 }
 .marslogo{
   background-image :url("https://cdn.imgbin.com/10/7/15/imgbin-exoplanet-bonbon-chocolate-mars-planet-6a7qxgzqYRNDNK64NTLG78A7W.jpg");

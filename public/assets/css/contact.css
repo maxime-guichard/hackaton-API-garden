@@ -13,11 +13,11 @@ label {
     background-size: cover;
     position: relative;
     height: 80vh;
-    width: 100%;
-
+    width: 60vh;
+    align-items: start;
 }
 
 .marker {
     height: 5vh;
-    width: 3%;
+    width: 7%;
 }
