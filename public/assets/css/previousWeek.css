@@ -1,8 +1,9 @@
 @import 'style.css';
 
-.previousWeek .card{
-    
-   
+.previousWeek h1{
+    color: white;
+    font-weight: bolder;
+    margin-top: 20px;
 }  
 .previousWeek .card-title{
     color: white;
