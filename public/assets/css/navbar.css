@@ -21,11 +21,11 @@
     font-family: var(--text-font);
     text-transform: uppercase;
     font-weight: 650;
-    color: var(--secondary-color);
+    color: var(--light-color);
 }
 
 .nav-link:hover {
-    color: var(--light-color);
+    color: var(--dark-color);
     filter: brightness(90%);
 }
 
