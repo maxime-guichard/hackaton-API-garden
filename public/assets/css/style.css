@@ -3,8 +3,8 @@
 
 :root {
   --primary-color: #8b5528;
-  --secondary-color: #f18035;
-  --danger-color: #ff7979;
+  --secondary-color: #c26060;
+  --danger-color: #c26060;
   --light-color: #faffff;
   --dark-color: #595959;
   --grey-color: #c4c4c4;
@@ -22,11 +22,17 @@
 }
 
 body {
-  background-color: var(--page-color);
+  background-image :url("https://blenderartists.org/uploads/default/original/4X/7/e/2/7e2d7bea4ac21388c4a96e1371f375c4ce00094b.jpg");
   font-family: var(--text-font);
+  background-attachment: fixed;
   scroll-behavior: smooth;
 }
-
+.shadow {
+  border: 0.5px solid #fff;
+  -moz-box-shadow: 5px 5px 12px #aaa; 
+  -webkit-box-shadow: 5px 5px 12px #aaa; 
+  box-shadow: 3px 3px 3px rgb(173, 173, 173) !important; 
+}
 .h1 {
   margin: 0;
   padding: 0;
@@ -34,4 +40,41 @@ body {
   text-transform: uppercase;
   font-weight: bold;
   color: var(--primary-color);
+}
+
+.gradient{
+  background: linear-gradient(
+      360deg,
+      var(--primary-color) 0%,
+      var(--secondary-color) 100%
+  );
+}
+.inVgradient{
+  background: linear-gradient(
+      360deg,
+      var(--secondary-color) 0%,
+      var(--primary-color) 100%
+  );
+}
+.mars{
+  background-image :url("/assets/images/mars.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position-x: 300px;
+  background-position-y: 50px;
+}
+.marslogo{
+  background-image :url("https://cdn.imgbin.com/10/7/15/imgbin-exoplanet-bonbon-chocolate-mars-planet-6a7qxgzqYRNDNK64NTLG78A7W.jpg");
+  background-repeat: no-repeat;
+}
+
+.marsfooter{
+  background-image :url("/assets/images/footermars.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% 27vh;
+  object-fit: contain;
+}
+.card {
+  opacity: 0.8;
 }
