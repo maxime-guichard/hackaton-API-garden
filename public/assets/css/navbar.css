@@ -1,7 +1,12 @@
 @import 'style.css';
 
-.navbar {
-    background-color: var(--primary-color);
+.navbar {  
+    background-image :url("/assets/images/headermars.png");
+    background-repeat: no-repeat;
+    background-position-y: -175px;
+    background-size: 100% 27vh;
+    object-fit: contain;
+    border-bottom: 1px solid #efa067;
 }
 
 .navbar-brand {
@@ -16,17 +21,17 @@
     font-family: var(--text-font);
     text-transform: uppercase;
     font-weight: 650;
-    color: var(--light-color);
+    color: var(--secondary-color);
 }
 
 .nav-link:hover {
-    color: var(--secondary-color);
-    filter: brightness(120%);
+    color: var(--light-color);
+    filter: brightness(90%);
 }
 
 .nav-link:active {
-    color: var(--secondary-color);
-    filter: brightness(90%);
+    color: var(--light-color);
+    filter: brightness(130%);
 }
 
 .navbar-toggler {
