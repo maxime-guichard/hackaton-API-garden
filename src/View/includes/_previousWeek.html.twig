@@ -1,52 +1,36 @@
 
+    <div class="container">
+        <div class="row p-5 opacity-75">  
+
             <div class="col-xl-4 col-lg-6 col-sm-12">
-                <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Monday</div>
-                    <div class="card-body">
-                        <h5 class="card-title">{{ tests.meals.0.strMeal }}</h5>
-                        <p class="card-text">{{ tests.meals.0.strInstructions}}</p>
-                    </div>
-                </div>
-                <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Tuesday</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Success card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-                <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Wednesday</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Success card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-                <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Thursday</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Success card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-                <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Friday</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Success card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-                <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Saturday</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Success card title</h5>
-                        <p class="card-text"<link rel="stylesheet" href="/assets/css/previousWeek.css">>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-                <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Sunday</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Success card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div class="card gradient inVgradient shadow bg-white mb-3">
+                    <div class="card-header text-white fw-bold"><i class="bi bi-calendar"></i></i> Monday</div>
+                        <div class="card-body">
+                            <h5 class="card-title text-white fw-bold"><i class="bi bi-egg-fried"></i> {{ monday.meals.0.strMeal }}</h5>
+                            <p class="card-text"><img src="{{ monday.meals.0.strMealThumb }}" width="100px" alt=""/></p><p class="text-white fw-bold"> {{ monday.meals.0.strInstructions }}</p>
                     </div>
                 </div>
             </div>
+
+            <div class="col-xl-4 col-lg-6 col-sm-12">
+                <div class="card gradient inVgradient shadow mb-3">
+                    <div class="card-header text-white fw-bold"><i class="bi bi-calendar"></i> Tuesday</div>
+                        <div class="card-body">
+                            <h5 class="card-title text-white fw-bold"><i class="bi bi-egg-fried"></i> {{ tuesday.meals.0.strMeal }}</h5>
+                            <p class="card-text"><img src="{{ tuesday.meals.0.strMealThumb }}" width="100px" alt=""/></p><p class="text-white fw-bold"> {{ tuesday.meals.0.strInstructions }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-6 col-sm-12">
+                <div class="card gradient inVgradient shadow mb-3">
+                    <div class="card-header text-white fw-bold"><i class="bi bi-calendar"></i> Wednesday</div>
+                        <div class="card-body">
+                            <h5 class="card-title text-white fw-bold"><i class="bi bi-egg-fried"></i> {{ wednesday.meals.0.strMeal }}</h5>
+                            <p class="card-text"><img src="{{ wednesday.meals.0.strMealThumb }}" width="100px" alt=""/></p><p class="text-white fw-bold"> {{ wednesday.meals.0.strInstructions }}</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>

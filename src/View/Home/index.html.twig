@@ -5,16 +5,15 @@
 {% endblock %}
 
 {% block stylesheet %}
-
 	<link rel="stylesheet" href="/assets/css/home.css">
 	<link rel="stylesheet" href="/assets/css/admin.css">
 	<link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/previousWeek.css">
+	
 {% endblock %}
 
 {% block content %}
-	<main>
-
+<div class="mars">
 		<div class="hero-image p-0">
 			<div class="hero-text">
 				<h1 class="h1 display-3 mt-5-xl">MARS 2112</h1>
@@ -22,23 +21,22 @@
 			</div>
 		</div>
 
-		<section class="lastInfos container">
-			<div class="row d-flex justify-content-center">
-
-				<div class="card text-center">
+		<section class="lastInfos container pt-5">
+			<div class="row d-flex justify-content-center shadow">
+				<div class="card text-center gradient">
                     <h2 class="text-center fw-bold">Menu du Jour</h2>
 					<div class="card-body">
 						<h5 class="card-title">Jeudi</h5>
-						<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+						<p class="card-text text-white">With supporting text below as a natural lead-in to additional content.</p>
 						<a href="/home/recipe" class="btn btn-primary w-50 me-1">Go Week Menu</a>
 					</div>
 				</div>
 			</div>
 		</section>
+
         <section class="previousWeek">
             {% include "includes/_previousWeek.html.twig" %}
         </section>
 	</section>
-	</main>
-   
+</div>
 {% endblock %}

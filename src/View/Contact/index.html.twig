@@ -12,17 +12,18 @@
 {% endblock %}
 
 {% block content %}
-
-	<main class="py-lg-5 px-lg-5 py-3 px-3">
-
-		<h1 class="h1 text-center pt-3 my-5">Contactez-nous</h1>
-
-		{% include "Contact/_form.html.twig" %}
-
-		<h2 class="my-5 text-center h1">Où nous trouver ?</h2>
-
-		<div class="map d-flex justify-content-center align-items-center p-0">
-			<img class="marker" src="/assets/images/marker.jpg" alt="marker">
+	<div class="container mb-3 pt-5">
+		<div class="row pt-3 mars">
+			<div class="col-6 border rounded shadow">
+				<h1 class="h1 text-center pt-3 my-5">Contactez-nous</h1>
+				{% include "Contact/_form.html.twig" %}
+			</div>
+			<div class="col-6">
+				<h2 class="my-5 text-center h1">Où nous trouver ?</h2>
+				<div class="map d-flex justify-content-center align-items-center p-0">
+					<img class="marker" src="/assets/images/marker.jpg" width="500" alt="marker">
+				</div>
+			</div>
 		</div>
-	</main>
+	</div>
 {% endblock %}
