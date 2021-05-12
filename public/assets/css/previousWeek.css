@@ -1,5 +1,8 @@
 @import 'style.css';
 
+.previousWeek .card{
+    height: 330px;
+}  
 .previousWeek h1{
     color: white;
     font-weight: bolder;
@@ -7,9 +10,10 @@
 }  
 .previousWeek .card-title{
     color: white;
+    font-weight: bolder;
 }
-.previousWeek p{
-    color: white;
+.previousWeek .card-text{
+    color: black;
 
     text-align: center;
 }
@@ -27,4 +31,12 @@
 }
 .bg-success {
     background-color: var(--secondary-color) !important;
+}
+.previousWeek .btn-warning{
+    
+    background-image :url("/assets/images/footermars.png");
+    background-position-x: -150px;
+    background-position-y: -150px;
+    color: white;
+    font-weight: bolder;
 }
