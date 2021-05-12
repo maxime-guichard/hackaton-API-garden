@@ -1,15 +1,29 @@
+@import 'style.css';
+
 .previousWeek .card{
     
-  max-height: 220px;
+   
 }  
 .previousWeek .card-title{
     color: white;
 }
-.previousWeek li{
+.previousWeek p{
     color: white;
-    list-style: none;
+
     text-align: center;
 }
-.previousWeek .card-header,h5{
+.previousWeek .card-header{
     text-align: center;
+    color: black;
+    font-weight: bolder;
+
+}
+.previousWeek h5{
+    text-align: center;
+    color: white;
+    
+
+}
+.bg-success {
+    background-color: var(--secondary-color) !important;
 }
