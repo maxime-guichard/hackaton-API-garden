@@ -21,38 +21,42 @@ class HomeController extends AbstractController
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
      */
+
     public function index(): string
     {
-        /*        $client = HttpClient::create();
-        $response = $client->request('GET', 'http://www.themealdb.com/api/json/v1/1/random.php');
+        $monday = [];
+        $tuesday = [];
+        $wednesday = [];
+        $thursday = [];
+        $friday = [];
+        $saturday = [];
 
-        $statusCode = $response->getStatusCode(); // get Response status code 200
-
-        if ($statusCode === 200) {
-            $tests = $response->toArray();
-            // convert the response (here in JSON) to an PHP array
-        }
-        var_dump($tests);d
-*/
-        return $this->twig->render('Home/index.html.twig');
-    }
-    public function recipe(): string
-    {
         $client = HttpClient::create();
-        $responseMonday = $client->request('GET', 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52771');
-        $responseTuesday = $client->request('GET', 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52770');
-        $responseWednesday = $client->request('GET', 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52777');
+        $responseMonday = $client->request('GET', 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52781');
+        $responseTuesday = $client->request('GET', 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52782');
+        $responseWednesday = $client->request('GET', 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52788');
+        $responseThursday = $client->request('GET', 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52780');
+        $responseFriday = $client->request('GET', 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52784');
+        $responseSaturday = $client->request('GET', 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52785');
+
         $statusCode = $responseMonday->getStatusCode();
+
         if ($statusCode === 200) {
             $monday = $responseMonday->toArray();
             $tuesday = $responseTuesday->toArray();
             $wednesday = $responseWednesday->toArray();
-            return $this->twig->render('Home/recipes.html.twig', [
-                'monday' => $monday, ['monday'],
-                'tuesday' => $tuesday, ['tuesday'],
-                'wednesday' => $wednesday, ['wednesday'],
-            ]);
+            $thursday = $responseThursday->toArray();
+            $friday = $responseFriday->toArray();
+            $saturday = $responseSaturday->toArray();
         }
-        return $this->twig->render('Home/index.html.twig');
+
+        return $this->twig->render('Home/index.html.twig', [
+            'monday'  => $monday, ['monday'],
+            'tuesday' => $tuesday, ['tuesday'],
+            'wednesday' => $wednesday, ['wednesday'],
+            'thursday' => $thursday, ['thursday'],
+            'friday' => $friday, ['friday'],
+            'saturday' => $saturday, ['saturday']
+        ]);
     }
 }

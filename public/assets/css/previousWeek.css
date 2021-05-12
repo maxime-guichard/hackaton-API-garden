@@ -1,13 +1,30 @@
 @import 'style.css';
 
-.previousWeek .card{
-    margin-left: 10px;
-    margin-right: 10px;
-    max-width: 100px;
-    min-width: 100px;
-   
+.previousWeek h1{
+    color: white;
+    font-weight: bolder;
+    margin-top: 20px;
+}  
+.previousWeek .card-title{
+    color: white;
 }
+.previousWeek p{
+    color: white;
 
+    text-align: center;
+}
+.previousWeek .card-header{
+    text-align: center;
+    color: black;
+    font-weight: bolder;
+
+}
+.previousWeek h5{
+    text-align: center;
+    color: white;
+    
+
+}
 .bg-success {
     background-color: var(--secondary-color) !important;
 }

@@ -1,52 +1,106 @@
+<div class="container">
+<h1 class="text-center">Previous Week</h1>
+	<div class="row p-5">
+		<div class="col-xl-4 col-lg-6 col-sm-12">
+			<div class="gradient shadow card text-white bg-success mb-3">
+				<div class="card-header">Monday</div>
+				<div class="card-body">
+					<h5 class="card-title">{{ monday.meals.0.strMeal|replace({'Irish': 'Moon'}) }}</h5>
 
-            <div class="col-xl-4 col-lg-6 col-sm-12">
-                <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Monday</div>
-                    <div class="card-body">
-                        <h5 class="card-title">{{ tests.meals.0.strMeal }}</h5>
-                        <p class="card-text">{{ tests.meals.0.strInstructions}}</p>
+					<p class="card-text">radioactive {{ monday.meals.0.strIngredient1}}</p>
+					<p class="card-text">mutate {{ monday.meals.0.strIngredient2}}</p>
+					<p class="card-text">radioactive {{ monday.meals.0.strIngredient3}}</p>
+					<p class="card-text">jupiter {{ monday.meals.0.strIngredient4}}</p>
+                    <div class="text-center">
+                       <a href="https://www.themealdb.com/meal/52781"target="_blank" class="btn btn-primary">Original recipe</a>
                     </div>
                 </div>
-                <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Tuesday</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Success card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			</div>
+		</div>
+		<div class="col-xl-4 col-lg-6 col-sm-12">
+			<div class="gradient shadow card text-white bg-success mb-3">
+				<div class="card-header">Tuesday</div>
+				<div class="card-body">
+					<h5 class="card-title">{{ tuesday.meals.0.strMeal|replace({'sweet': 'mars'}) }}</h5>
+
+					<p class="card-text">radioactive {{ tuesday.meals.0.strIngredient1}}</p>
+					<p class="card-text">radioactive {{ tuesday.meals.0.strIngredient2}}</p>
+					<p class="card-text">galactic {{ tuesday.meals.0.strIngredient3}}</p>
+					<p class="card-text">radioactive {{ tuesday.meals.0.strIngredient4}}</p>
+                    <div class="text-center">
+                       <a href="https://www.themealdb.com/meal/52782"target="_blank" class="btn btn-primary">Original recipe</a>
                     </div>
                 </div>
-                <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Wednesday</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Success card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			</div>
+		</div>
+		<div class="col-xl-4 col-lg-6 col-sm-12">
+			<div class="gradient shadow card text-white bg-success mb-3">
+				<div class="card-header">Wednesday</div>
+				<div class="card-body">
+					<h5 class="card-title">{{ wednesday.meals.0.strMeal|replace({'Christmas': 'Mercury'})}}</h5>
+
+					<p class="card-text">radioactive {{ wednesday.meals.0.strIngredient1}}</p>
+					<p class="card-text">{{ wednesday.meals.0.strIngredient2|replace({'dark': 'abyssal'})}}</p>
+					<p class="card-text">{{ wednesday.meals.0.strIngredient3}}</p>
+					<p class="card-text">radioactive {{ wednesday.meals.0.strIngredient4}} </p>
+                    <div class="text-center">
+                       <a href="https://www.themealdb.com/meal/52788"target="_blank" class="btn btn-primary">Original recipe</a>
                     </div>
-                </div>
-                <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Thursday</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Success card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+				</div>
+			</div>
+		</div>
+		<div class="col-xl-4 col-lg-6 col-sm-12">
+			<div class="gradient shadow card text-white bg-success mb-3">
+				<div class="card-header">Thursday</div>
+				<div class="card-body">
+					<h5 class="card-title">{{ thursday.meals.0.strMeal|replace({'with': '& mutate'})|replace({'Potato': 'Jupiter'}) }} </h5>
+
+					<p class="card-text">radioactive {{ thursday.meals.0.strIngredient1}}</p>
+					<p class="card-text">radioactive {{ thursday.meals.0.strIngredient2}}</p>
+					<p class="card-text">radioactive {{ thursday.meals.0.strIngredient3}}</p>
+					<p class="card-text">mutate {{ thursday.meals.0.strIngredient4}}</p>
+                    <div class="text-center">
+                       <a href="https://www.themealdb.com/meal/52780"target="_blank" class="btn btn-primary">Original recipe</a>
                     </div>
-                </div>
-                <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Friday</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Success card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+				</div>
+			</div>
+		</div>
+		<div class="col-xl-4 col-lg-6 col-sm-12">
+			<div class="gradient shadow card text-white bg-success mb-3">
+				<div class="card-header">Friday</div>
+				<div class="card-body">
+					<h5 class="card-title">{{ friday.meals.0.strMeal|replace({'Chili': 'venus &'})|replace({'with': ''}) }}</h5>
+
+					<p class="card-text">radioactive {{ friday.meals.0.strIngredient1}}</p>
+					<p class="card-text">radioactive {{ friday.meals.0.strIngredient2}}</p>
+					<p class="card-text">{{ friday.meals.0.strIngredient3}}</p>
+					<p class="card-text">galactic {{ friday.meals.0.strIngredient4}}</p>
+                    <div class="text-center">
+                       <a href="https://www.themealdb.com/meal/52784"target="_blank" class="btn btn-primary">Original recipe</a>
                     </div>
-                </div>
-                <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Saturday</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Success card title</h5>
-                        <p class="card-text"<link rel="stylesheet" href="/assets/css/previousWeek.css">>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+				</div>
+			</div>
+		</div>
+		<div class="col-xl-4 col-lg-6 col-sm-12">
+			<div class="gradient shadow card text-white bg-success mb-3">
+				<div class="card-header">Saturday</div>
+				<div class="card-body">
+					<h5 class="card-title">Saturn {{ saturday.meals.0.strMeal }}</h5>
+
+					<p class="card-text">{{ saturday.meals.0.strIngredient1}}</p>
+					<p class="card-text">Comet {{ saturday.meals.0.strIngredient2}}</p>
+					<p class="card-text">{{ saturday.meals.0.strIngredient3}}</p>
+					<p class="card-text">{{ saturday.meals.0.strIngredient4}}</p>
+                    <div class="text-center">
+                       <a href="https://www.themealdb.com/meal/52785"target="_blank" class="btn btn-primary">Original recipe</a>
                     </div>
-                </div>
-                <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Sunday</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Success card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-            </div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

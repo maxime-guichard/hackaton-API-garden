@@ -27,8 +27,9 @@ class RecipesController extends AbstractController
         $responseMonday = $client->request('GET', 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52771');
         $responseTuesday = $client->request('GET', 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52770');
         $responseWednesday = $client->request('GET', 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52777');
-        $responseThu = $client->request('GET', 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772');
+        $responseThu = $client->request('GET', 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52773');
         $responseFri = $client->request('GET', 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772');
+        $responseSat = $client->request('GET', 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52774');
 
         $statusCode = $responseMonday->getStatusCode();
         if ($statusCode === 200) {
@@ -37,11 +38,16 @@ class RecipesController extends AbstractController
             $wednesday = $responseWednesday->toArray();
             $thu = $responseThu->toArray();
             $fri = $responseFri->toArray();
+            $sat = $responseSat->toArray();
 
             return $this->twig->render('Home/recipes.html.twig', [
                 'monday' => $monday, ['monday'],
                 'tuesday' => $tuesday, ['tuesday'],
-                'wednesday' => $wednesday, ['wednesday'],'thu' => $thu, ['thu'],'fri' => $fri, ['fri'],]);
+                'wednesday' => $wednesday, ['wednesday'],
+                'thu' => $thu, ['thu'],
+                'fri' => $fri, ['fri'],
+                'sat' => $sat, ['sat'],
+                ]);
         }
         return $this->twig->render('Home/recipes.html.twig');
     }
